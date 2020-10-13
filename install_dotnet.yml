@@ -2,5 +2,11 @@
 - name: Install dotnet
   hosts: all
   tasks:
-   - name: Install package
+   - name: Install scl-utils
      yum: name=scl-utils state=present
+   - name: Enable repository
+     command: subscription-manager repos --enable=rhel-7-server-dotnet-rpms
+   - name: Install rh-dotnet31
+     yum: name=rh-dotnet31 state=present
+   - name: Verify .net version
+     command: dotnet --version

@@ -1,6 +1,6 @@
 ---
-- name: Deploy dot net core application
+- name: Install dotnet
   host: all
   tasks:
-   - name: create new project
-     command: dotnet new console -n MyConsoleApp -o myApp --force
+   - name: Install scl-utils
+     yum: name=scl-utils state=present

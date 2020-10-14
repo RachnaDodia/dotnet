@@ -1,6 +1,6 @@
 ---
 - name: Deploy dot net core application
-  host: all
+  hosts: all
   tasks:
    - name: create new project
      command: dotnet new console -n MyConsoleApp -o myApp --force

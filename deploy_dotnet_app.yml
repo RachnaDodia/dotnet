@@ -1,5 +1,5 @@
 ---
-- name: Deploy .net core application
+- name: Deploy dot net core application
   host: all
   tasks:
    - name: create new project

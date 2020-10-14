@@ -1,6 +1,0 @@
----
-- name: Install dotnet
-  host: all
-  tasks:
-   - name: Install scl-utils
-     yum: name=scl-utils state=present
